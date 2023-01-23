@@ -72,12 +72,12 @@ class FirstPortalViewController: UIViewController {
 }
 
 extension FirstPortalViewController: MorphAnimatorViewSource {
-    func portalView() -> UIView? {
-        iconView
-    }
-    
     func viewsOfInterest(forTransition key: Morph.TransitionKey, transit: Morph.Transit) -> [String : UIView]? {
         ["firstDot": firstDot,
          "secondDot": secondDot]
+    }
+    
+    func portalView() -> UIView? {
+        iconView
     }
 }
