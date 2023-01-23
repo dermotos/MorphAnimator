@@ -1,6 +1,6 @@
 # MorphAnimator
 
-![Example](img/animated-example.gif?raw=true "Example")
+![Example](animated-example.gif?raw=true, "Example")
 
 ## Overview
 
@@ -53,7 +53,7 @@ Finally to perform the animation, just call pushViewController, passing `.morph`
 
 ```swift
 
-        navigationController?.pushViewController(secondMorphViewController, animated: .morph)
+navigationController?.pushViewController(secondMorphViewController, animated: .morph)
 
 ```
 
