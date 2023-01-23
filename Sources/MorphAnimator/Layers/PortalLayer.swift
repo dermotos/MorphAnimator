@@ -43,6 +43,19 @@ extension Morph {
             
             portal.translatesAutoresizingMaskIntoConstraints = false
             portal.clipsToBounds = true
+            
+            if scene.animationDirection == .forward {
+                portal.layer.cornerRadius = scene.portals.from.layer.cornerRadius
+                if #available(iOS 13.0, *) {
+                    portal.layer.cornerCurve = scene.portals.from.layer.cornerCurve
+                }
+            } else {
+                portal.layer.cornerRadius = scene.portals.to.layer.cornerRadius
+                if #available(iOS 13.0, *) {
+                    portal.layer.cornerCurve = scene.portals.to.layer.cornerCurve
+                }
+            }
+           
             let layer = PortalLayer(content: portal, constraints: constraints, scene: scene)
             layer.endPlacement = endPlacement
             return layer

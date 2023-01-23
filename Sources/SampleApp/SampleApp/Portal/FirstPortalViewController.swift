@@ -28,8 +28,8 @@ class FirstPortalViewController: UIViewController {
         view.backgroundColor = .systemBackground
         view.addSubview(iconView)
         NSLayoutConstraint.activate([
-            iconView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            iconView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            iconView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -50),
+            iconView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 80)
         ])
         
         tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
