@@ -127,13 +127,13 @@ extension Morph {
             fromView:\t\(self.frameInWindow(view: scene.baseViews.from))
             toView:\t\(self.frameInWindow(view: scene.baseViews.to))
             portalFrom:\t\(self.portalLayer.currentPlacement)
-            portalTo:\t\(self.portalLayer.endPlacement)
+            portalTo:\t\(String(describing: self.portalLayer.endPlacement))
             """
             )
         }
         
         func frameInWindow(view: UIView) -> CGRect {
-            guard let window = view.window else { return .null }
+            guard view.window != nil else { return .null }
             return view.convert(view.bounds, to: view.window)
         }
         
