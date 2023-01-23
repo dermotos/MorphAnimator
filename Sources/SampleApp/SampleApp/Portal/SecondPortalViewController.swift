@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import MorphAnimator
 
 class SecondPortalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .red
     }
-
 }
+
+extension SecondPortalViewController: MorphAnimatorViewSource { }

@@ -20,7 +20,6 @@ final class MenuViewController: UIViewController {
             case .portalExample: return "Portal Example"
             }
         }
-        
     }
     
     let cellReuseIdentifier = "cell"
@@ -34,7 +33,6 @@ final class MenuViewController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-       
     }
     
     required init?(coder: NSCoder) {
@@ -43,7 +41,26 @@ final class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+        setupView()
+        title = "Examples"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableview.deselectSelectedRow()
+        
+    }
+    
+    private func setupView() {
+        view.backgroundColor = .systemBackground
+        tableview.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableview)
+        NSLayoutConstraint.activate([
+            tableview.topAnchor.constraint(equalTo: view.topAnchor),
+            tableview.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableview.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+        ])
     }
 }
 
@@ -58,17 +75,18 @@ extension MenuViewController: UITableViewDataSource {
         cell.textLabel?.text = "\(item.description)"
         return cell
     }
-    
 }
 
 extension MenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let item = MenuItem(rawValue: indexPath.item) else { fatalError() }
         switch item {
-        case .portalExample:
-            print("")
         case .morphExample:
-            print("")
+            let firstMorphViewController = FirstMorphViewController()
+            navigationController?.pushViewController(firstMorphViewController, animated: .default)
+        case .portalExample:
+            let firstPortalViewController = FirstPortalViewController()
+            navigationController?.pushViewController(firstPortalViewController, animated: .default)
         }
     }
 }
