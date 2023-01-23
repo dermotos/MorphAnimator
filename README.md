@@ -1,6 +1,6 @@
 # MorphAnimator
 
-![Example](img/animated-example.gif?raw=true "Example")
+![animated-example](https://user-images.githubusercontent.com/1140466/214097087-47372922-57e5-44c8-bafe-1cf3a6c1d4c9.gif)
 
 ## Overview
 
