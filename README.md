@@ -1,6 +1,7 @@
 # MorphAnimator
 
-![Example](animated-example.gif?raw=true, "Example")
+![animated-example](https://user-images.githubusercontent.com/1140466/214097087-47372922-57e5-44c8-bafe-1cf3a6c1d4c9.gif)
+>>>>>>> c31b2882200cdbc07582fa9dc69df10648efe318
 
 ## Overview
 
@@ -64,8 +65,11 @@ Check out the example app in the SPM package for more details.
 
 ### Is this ready to be used?
 
-Not quite yet! but it is getting there. 
+Heh!, not quite yet, but it is getting there. 
 Feel free to submit a pull request if you find this useful and have made some improvements or additions! Otherwise, I'll get around to it eventually.
+There is still a lot of edge cases that must be addressed. Better support for rounded corners, improved portal effects, masked views, transparency, text etc... there are a lot of optimisations and improvements that can be made. I hope to work on this more in 2023 
+
+<sub>I really hope no one is reading this in 2028 and I've committed nothing further so far</sub>
 
 
 ## Suggested review process
@@ -79,9 +83,3 @@ If you'd like to read and understand this code, I suggest looking at it in the f
 4. `Morph.Animator`. Yes, the initializers definitely need refactoring, but ignoring that for the minute, observe how the initializer looks at the "scene" and creates a series of animatable layers for what it needs to animate.
 5. The `Morph.Animator.prepare()` and `.animate()` methods. These setup and then animate, respectively, the animatable layers created from the scene.
 
-
-### Yes, yes...
-
-There is still a lot of edge cases that must be addressed. Better support for rounded corners, improved portal effects, masked views, transparency, text etc... there are a lot of optimisations and improvements that can be made. I hope to work on this more in 2023 
-
-<sub>(I really hope no one is reading this in 2028 and I've committed further nothing so far)</sub>
