@@ -6,6 +6,12 @@ import UIKit
 
 extension Morph {
     /// Stores references to constraints that can be animated. Can store position or size constraints.
+    ///
+    /// It is important to note that a `Morph.ConstraintSet` stores the x and y position in a manner that is different from how UIKit traditionally deals with coordinates.
+    /// Instead of the top left of views being considered `[0,0]`, we instead use the center of the view as `[0,0]`.
+    /// This greatly simplifies scaling and rotating animations whilst the reference frame is perhaps also moving.
+    /// It is much easier to reason on an x/y axis about a view rotating or scaling about a central 0,0 point,,
+    /// than it is to consider all four discrete corner point coordinates moving in the same manner.
     struct ConstraintSet {
         
         /// Initialize a constraint set that constrains one asset to another.
