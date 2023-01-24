@@ -1,6 +1,7 @@
 # MorphAnimator
 
 ![animated-example](https://user-images.githubusercontent.com/1140466/214097087-47372922-57e5-44c8-bafe-1cf3a6c1d4c9.gif)
+>>>>>>> c31b2882200cdbc07582fa9dc69df10648efe318
 
 ## Overview
 
